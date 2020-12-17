@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,6 +72,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Context\Account.cs" />
+    <Compile Include="Context\AutoSchoolContext.cs" />
+    <Compile Include="Context\Branch.cs" />
+    <Compile Include="Context\BranchCategory.cs" />
+    <Compile Include="Context\Category.cs" />
+    <Compile Include="Context\City.cs" />
+    <Compile Include="Context\ContactInformation.cs" />
+    <Compile Include="Context\Country.cs" />
+    <Compile Include="Context\Employee.cs" />
+    <Compile Include="Context\Lesson.cs" />
+    <Compile Include="Context\Payment.cs" />
+    <Compile Include="Context\Person.cs" />
+    <Compile Include="Context\Position.cs" />
+    <Compile Include="Context\Rating.cs" />
+    <Compile Include="Context\Region.cs" />
+    <Compile Include="Context\Role.cs" />
+    <Compile Include="Context\Student.cs" />
+    <Compile Include="Context\StudyClass.cs" />
+    <Compile Include="Context\StudyRoom.cs" />
+    <Compile Include="Context\sysdiagrams.cs" />
+    <Compile Include="Context\Transport.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -98,6 +128,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
