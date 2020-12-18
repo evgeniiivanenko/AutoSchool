@@ -32,6 +32,7 @@ namespace AutoSchool.Context
         public virtual DbSet<StudyRoom> StudyRoom { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Transport> Transport { get; set; }
+        public virtual DbSet<StudentView> StudentView { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

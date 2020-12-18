@@ -64,6 +64,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataAccess\Interfaces\IPositionRepository.cs" />
+    <Compile Include="DataAccess\PositionRepository.cs" />
+    <Compile Include="Logic\Interface\IPositionLogic.cs" />
+    <Compile Include="Logic\PositionConverter.cs" />
+    <Compile Include="Logic\PositionLogic.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Context\AutoSchoolContext.cs" />
+    <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\BranchCategory.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\ContactInformation.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Lesson.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Rating.cs" />
+    <Compile Include="Models\Region.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentView.cs" />
+    <Compile Include="Models\StudyClass.cs" />
+    <Compile Include="Models\StudyRoom.cs" />
+    <Compile Include="Context\sysdiagrams.cs" />
+    <Compile Include="Models\Transport.cs" />
+    <Compile Include="ViewModels\Helper\DelegateCommand.cs" />
+    <Compile Include="ViewModels\PositionsListWindowModel.cs" />
+    <Compile Include="ViewModels\PositionViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\PositionDetailsWnd.xaml.cs">
+      <DependentUpon>PositionDetailsWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PositionsListWnd.xaml.cs">
+      <DependentUpon>PositionsListWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentsListWnd.xaml.cs">
+      <DependentUpon>StudentsListWnd.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,27 +112,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Context\Account.cs" />
-    <Compile Include="Context\AutoSchoolContext.cs" />
-    <Compile Include="Context\Branch.cs" />
-    <Compile Include="Context\BranchCategory.cs" />
-    <Compile Include="Context\Category.cs" />
-    <Compile Include="Context\City.cs" />
-    <Compile Include="Context\ContactInformation.cs" />
-    <Compile Include="Context\Country.cs" />
-    <Compile Include="Context\Employee.cs" />
-    <Compile Include="Context\Lesson.cs" />
-    <Compile Include="Context\Payment.cs" />
-    <Compile Include="Context\Person.cs" />
-    <Compile Include="Context\Position.cs" />
-    <Compile Include="Context\Rating.cs" />
-    <Compile Include="Context\Region.cs" />
-    <Compile Include="Context\Role.cs" />
-    <Compile Include="Context\Student.cs" />
-    <Compile Include="Context\StudyClass.cs" />
-    <Compile Include="Context\StudyRoom.cs" />
-    <Compile Include="Context\sysdiagrams.cs" />
-    <Compile Include="Context\Transport.cs" />
+    <Compile Include="DataAccess\Interfaces\IStudentRepository.cs" />
+    <Compile Include="DataAccess\StudentRepository.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -108,6 +129,18 @@
     <Page Include="Styles\TextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PositionDetailsWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PositionsListWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StudentsListWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -137,11 +170,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logic\" />
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
